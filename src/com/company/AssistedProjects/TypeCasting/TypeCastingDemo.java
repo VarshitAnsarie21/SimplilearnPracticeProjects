@@ -1,6 +1,6 @@
-package com.company.AssistedProjects;
+package com.company.AssistedProjects.TypeCasting;
 
-public class TypeCasting {
+public class TypeCastingDemo {
 
     public static void main(String[] args) {
         //Example of Widening or implicit typecasting
