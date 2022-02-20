@@ -1,6 +1,6 @@
 package com.company.PracticeProjects;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class ArithmeticCalculator {
     public static void main(String args[]){
