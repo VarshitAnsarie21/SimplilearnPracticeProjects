@@ -1,4 +1,4 @@
-package com.company.AssistedProjects.AccessModifiers;
+package com.company.assistedprojects.accessmodifiers;
 
 class PublicDemo{ // this class showing the "Public access modifier" functionality
     void showMessage(){

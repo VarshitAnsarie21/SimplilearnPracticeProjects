@@ -1,4 +1,4 @@
-package com.company.AssistedProjects.AccessModifiers;
+package com.company.assistedprojects.accessmodifiers;
 
 class Demo{  // this class showing the "protected access modifier" functionality
     protected int num = 20;

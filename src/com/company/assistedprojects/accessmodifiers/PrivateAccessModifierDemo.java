@@ -1,4 +1,4 @@
-package com.company.AssistedProjects.AccessModifiers;
+package com.company.assistedprojects.accessmodifiers;
 
 class PrivateDemo{     // this class showing the "private access modifier" functionality
     private int num = 10;

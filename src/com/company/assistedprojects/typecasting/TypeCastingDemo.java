@@ -1,4 +1,4 @@
-package com.company.AssistedProjects.TypeCasting;
+package com.company.assistedprojects.typecasting;
 
 public class TypeCastingDemo {
 

@@ -1,4 +1,4 @@
-package com.company.PracticeProjects;
+package com.company.practiceprojects;
 
 import java.util.Scanner;
 

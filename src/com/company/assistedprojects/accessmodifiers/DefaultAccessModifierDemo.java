@@ -1,4 +1,4 @@
-package com.company.AssistedProjects.AccessModifiers;
+package com.company.assistedprojects.accessmodifiers;
 
 class DefaultDemo{ // this class showing the "default access modifier" functionality
     void showMessage(){
