@@ -1,4 +1,4 @@
-package com.company.assistedprojects.orderstatistics;
+package com.company.assistedprojects.datastructuresarrayandlist;
 
 import java.util.Arrays;
 import java.util.Scanner;

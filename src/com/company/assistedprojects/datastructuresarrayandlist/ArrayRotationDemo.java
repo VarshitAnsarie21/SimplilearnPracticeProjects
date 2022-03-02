@@ -1,4 +1,4 @@
-package com.company.assistedprojects.arrayrotation;
+package com.company.assistedprojects.datastructuresarrayandlist;
 
 class RotateArray {
 
