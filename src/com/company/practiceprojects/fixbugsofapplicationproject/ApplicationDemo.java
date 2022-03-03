@@ -64,10 +64,10 @@ public class ApplicationDemo {
 
                     //add the new expense into array
                     case 2:
-                        System.out.println("Enter the value to add your Expense: \n");
+                        System.out.println("Enter the value to add your Expense:");
                         int value = sc.nextInt();
                         expenses.add(value);
-                        System.out.println("Your value is updated\n");
+                        System.out.println("Your value is updated");
                         //expenses.addAll(arrayList);
                         System.out.println(expenses+"\n");
                         optionsSelection();
@@ -75,10 +75,11 @@ public class ApplicationDemo {
 
                     //Delete all the expenses present in the array
                     case 3:
-                        System.out.println("You are about the delete all your expenses! \nConfirm again by selecting the same option...\n");
+                        System.out.println("You are about the delete all your expenses! \nConfirm again by selecting the same option...");
                         int con_choice = sc.nextInt();
                         if(con_choice == options){
                             expenses.clear();
+                            System.out.print("Expenses array is now empty:");
                             System.out.println(expenses+"\n");
                             System.out.println("All your expenses are erased!\n");
                         } else {
@@ -104,7 +105,7 @@ public class ApplicationDemo {
                         if(result < 0) {
                             System.out.println("Expense is not present in the list");
                         } else {
-                            System.out.println("Expense is found at position: "+result+1);
+                            System.out.println("Expense is found at position: "+(result+1));
                         }
                         System.out.println();
                         optionsSelection();
