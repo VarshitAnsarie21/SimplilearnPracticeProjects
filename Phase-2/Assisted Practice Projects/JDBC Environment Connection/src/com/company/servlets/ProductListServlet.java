@@ -52,7 +52,7 @@ public class ProductListServlet extends HttpServlet {
 			out.println("<h1>LIST OF PRODUCTS IN DATABASE</h1>");
 			
 			while(rs.next()) {
-				out.println("<h2>"+rs.getInt("ID")+" :- "+rs.getString("name")+" - "+rs.getDate("date_added")+"</h2>");
+				out.println("<h2>"+rs.getInt("ID")+" :- "+rs.getString("name")+" - "+rs.getInt("price")+"</h2>");
 			}
 			
 			stmnt.close();
