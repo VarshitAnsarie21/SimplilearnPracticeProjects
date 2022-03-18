@@ -2,7 +2,6 @@ package com.company.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,19 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.company.jdbcconnection.DBConnection;
-
 /**
- * Servlet implementation class ProductListServlet
+ * Servlet implementation class ProductDetailsServlet
  */
-@WebServlet("/searchProduct")
-public class SearchProductServlet extends HttpServlet {
+@WebServlet("/productDetails")
+public class ProductDetailsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchProductServlet() {
+    public ProductDetailsServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,32 +30,19 @@ public class SearchProductServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String dbUrl = "jdbc:mysql://localhost:3306/ecommerce";
-		String username = "root";
-		String password = "Simplilearn";
-		
 		response.setContentType ("text/html");
         PrintWriter out = response.getWriter ();
         
-        RequestDispatcher rd = null;
-        
-  		int id = 0;
-        
+        RequestDispatcher rd =null;
+         
         out.println("<html><body>");
         
         try {
         	
-            id = Integer.parseInt(request.getParameter ("productId"));
-     
-        	DBConnection dbConnection = new DBConnection(dbUrl, username, password);
-			
-        	PreparedStatement stmnt = dbConnection.getConnection().prepareStatement ("select * from eproduct where id=?");
-            
-        	stmnt.setString (1, request.getParameter ("productId"));
-        	
-        	ResultSet rs = stmnt.executeQuery();
-        	
-        	System.out.println(stmnt);
+        	int id = Integer.parseInt(request.getParameter ("productId"));
+        	String productName = request.getParameter ("productName");
+        	String productType = request.getParameter ("productType");
+        	int productPrice = Integer.parseInt(request.getParameter ("productPrice"));
         	
         	out.println("<div align='center'>");
         	
@@ -70,29 +54,25 @@ public class SearchProductServlet extends HttpServlet {
       
             out.print("<th> Product ID </th>");
     		out.print("<th> Product Name </th>");
+    		out.print("<th> Product Type </th>");
     		out.print("<th> Product Price </th>");
-    		out.print("<th> Data Of Product Added </th>");
             
             out.print ("</tr>");
             
-            /* Printing result */
-            while (rs.next()){
             	
-             out.print("<tr><td>" 
-            		 	+ rs.getInt("Id") + "</td><td>" 
-            		 	+ rs.getString("name") + " </td><td>" 
-            		 	+ rs.getInt("price") + " </td><td>" 
-            		 	+ rs.getDate("date_added") + "</td></tr>");
-            }
-            
+             out.print("<tr><td>"+ id + "</td><td>" 
+            		 	+ productName + " </td><td>" 
+            		 	+ productType + " </td><td>" 
+            		 	+ productPrice + "</td></tr>");
+
             out.print ("</table>");
         	
         }catch(NumberFormatException e){
 			
-			rd = request.getRequestDispatcher("index.html");
+			rd = request.getRequestDispatcher("index.jsp");
 			rd.include(request, response);
 			out.println("<div align='center'>");
-			out.print("<span style='color: red; margin-left: 25px'>Invalid product ID. Please Enter a valid numeric ID</span><br/>");
+			out.print("<span style='color: red; margin-left: 25px'>Invalid product ID. Please Enter a valid details</span><br/>");
 			out.println("</div>");
 			
 		}catch (Exception e2){
