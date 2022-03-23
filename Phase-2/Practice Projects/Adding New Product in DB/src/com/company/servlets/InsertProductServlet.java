@@ -87,7 +87,7 @@ public class InsertProductServlet extends HttpServlet {
 				rd = request.getRequestDispatcher("index.html");
 				rd.include(request, response);
 				out.println("<div align='center'>");
-				out.print("<span style='color: red; margin-left: 25px'>Invalid product details. Please Enter a valid product details</span><br/>");
+				out.print("<br/><span style='color: red; margin-left: 25px'>Invalid product details. Please Enter a valid product details</span><br/>");
 				out.println("</div>");
 				
 			}catch (Exception e) {
