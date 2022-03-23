@@ -19,7 +19,7 @@
 			<form action="assignToTeacher" method="post">
 				<table border="1" cellpadding="10">
 				
-					<h3>Add New Teacher</h3>
+					<h3>Assign Class & Subject to Teacher</h3>
 					<tr>
 						<th>Select Teacher</th>
 						<td>
