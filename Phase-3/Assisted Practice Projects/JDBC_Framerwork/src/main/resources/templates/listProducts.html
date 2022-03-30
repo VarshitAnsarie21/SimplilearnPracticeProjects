@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>JDBC Framework</title>
+</head>
+<style> table,td,th {border:1px solid green; padding:10px;}</style>
+<body>
+
+	<div align="center">
+		<h1>PRODUCT LIST</h1>
+		<table>
+			<tr>
+				<th>Product Name</th>
+				<th>Product Price</th>
+				<th>Date of Product Added</th>
+			</tr>
+			<tr th:each="data : ${products}">
+				<td> <span th:text = "${data.name}"></span> </td>
+				<td> <span th:text = "${data.price}"></span> </td>
+				<td> <span th:text = "${data.dateAdded}"></span> </td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
