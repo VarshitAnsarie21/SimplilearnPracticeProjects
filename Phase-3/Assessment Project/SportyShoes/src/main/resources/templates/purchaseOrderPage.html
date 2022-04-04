@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sporty Shoes</title>
+</head>
+<body>
+		
+		<div align="right" style="margin-right: 20px">
+			<a href="dashboard" style="font-size: 20px">DashBoard</a> || <a href="/" style="font-size: 20px">Logout</a>
+		</div>
+	
+		<div align='center'>
+		<h1>TO SEE THE PURCHASE REPORT OF PRODUCT</h1>
+			<form action="purchaseReport" method="post">
+				<table border="1" cellpadding="10">
+					<tr>
+						<th>Product Category</th>
+						<td><select name="category" id="category">
+							<option value="1">Men's Shoes</option>
+							<option value="2">Women's Shoes</option>
+							<option value="3">Children's Shoes</option>
+						</select></td>
+					</tr>
+					<tr>
+						<th>Date of Purchase</th>
+						<td>
+							<input type="text" name="purchasedate" placeholder="yyyy-mm-dd" required/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+						<input type="submit" value="Submit" /></td>
+					</tr>
+				</table>
+			</form>
+	  </div>
+	
+</body>
+</html>

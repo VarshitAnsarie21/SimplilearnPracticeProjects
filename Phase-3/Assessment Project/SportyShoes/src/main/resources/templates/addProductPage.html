@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sporty Shoes</title>
+</head>
+<body>
+		
+		<div align="right" style="margin-right: 20px">
+			<a href="dashboard" style="font-size: 20px">DashBoard</a> || <a href="/" style="font-size: 20px">Logout</a>
+		</div>
+	
+		<div align='center'>
+		<h1>ADD NEW PRODUCT</h1>
+			<form action="addNewProduct" method="post">
+				<table border="1" cellpadding="10">
+					<tr>
+						<th>Product Name</th>
+						<td><input type="text" name="productname" required></td>
+					</tr>
+					<tr>
+						<th>Product Price</th>
+						<td><input type="text" name="productprice" required></td>
+					</tr>
+					<tr>
+						<th>Product Category</th>
+						<td><select name="category" id="category">
+							<option value="Men's Shoes">Men's Shoes</option>
+							<option value="Women's Shoes">Women's Shoes</option>
+							<option value="Children's Shoes">Children's Shoes</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+						<input type="submit" value="Submit" /></td>
+					</tr>
+				</table>
+			</form>
+	  </div>
+	  
+</body>
+</html>

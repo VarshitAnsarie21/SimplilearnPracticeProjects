@@ -5,8 +5,7 @@ public class Product {
 	private int productid;
 	private String productname;
 	private int productprice;
-	private int userid;
-	private int categoryid;
+	private String categoryname;
 	
 	public Product(){
 		super();
@@ -36,20 +35,11 @@ public class Product {
 		this.productprice = productprice;
 	}
 
-	public int getUserid() {
-		return userid;
+	public String getCategoryname() {
+		return categoryname;
 	}
 
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setCategoryname(String categoryname) {
+		this.categoryname = categoryname;
 	}
-
-	public int getCategoryid() {
-		return categoryid;
-	}
-
-	public void setCategoryid(int categoryid) {
-		this.categoryid = categoryid;
-	}
-	
 }

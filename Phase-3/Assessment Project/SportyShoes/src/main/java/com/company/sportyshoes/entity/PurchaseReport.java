@@ -5,8 +5,8 @@ import java.sql.Date;
 public class PurchaseReport {
 
 	private int reportid;
-	private int userid;
-	private int productid;
+	private String username;
+	private String productname;
 	private int categoryid;
 	private Date purchasedate;
 	
@@ -22,20 +22,20 @@ public class PurchaseReport {
 		this.reportid = reportid;
 	}
 
-	public int getUserid() {
-		return userid;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public int getProductid() {
-		return productid;
+	public String getProductname() {
+		return productname;
 	}
 
-	public void setProductid(int productid) {
-		this.productid = productid;
+	public void setProductname(String productname) {
+		this.productname = productname;
 	}
 
 	public int getCategoryid() {

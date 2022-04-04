@@ -6,26 +6,45 @@
 </head>
 <style> table,td,th {border:1px solid green; padding:10px;}</style>
 <body>
-	
 		<div align="right" style="margin-right: 20px">
 			<a href="dashboard" style="font-size: 20px">DashBoard</a> || <a href="/" style="font-size: 20px">Logout</a>
 		</div>
+	
+		<div align='center'>
+		<h1>DELETE THE PRODUCT</h1>
+			<h2>Select the Product from below Table</h2>
+			<h2>You want to delete</h2>
 		
-		<div align="center">
-		
-			<h1>PRODUCT DETAILS</h1>
 			<table>
 				<tr>
+					<th>Product ID</th>
 					<th>Product Name</th>
 					<th>Product Price</th>
 					<th>Product Category</th>
 				</tr>
 				<tr th:each="data : ${productList}">
+					<td> <span th:text = "${data.productid}"></span> </td>
 					<td> <span th:text = "${data.productname}"></span> </td>
 					<td> <span th:text = "${data.productprice}"></span> </td>
 					<td> <span th:text = "${data.categoryname}"></span> </td>
 				</tr>
 			</table>
-		</div>	
+			
+			<form action="deleteProductDetail" method="post">
+				<h2>Insert The ID of Product you want to delete</h2>
+				<table border="1" cellpadding="10">
+					<tr>
+						<th>Product ID</th>
+						<td>
+							<input type="text" name="productid" required>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+						<input type="submit" value="Submit" /></td>
+					</tr>
+				</table>
+			</form>
+	  </div>
 </body>
 </html>
