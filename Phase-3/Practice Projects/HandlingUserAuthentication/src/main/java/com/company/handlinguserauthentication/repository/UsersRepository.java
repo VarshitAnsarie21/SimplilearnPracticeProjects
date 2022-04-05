@@ -1,12 +1,11 @@
 package com.company.handlinguserauthentication.repository;
 
-import java.util.Optional;
-
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.company.handlinguserauthentication.entity.User;
 
-public interface AuthenticationRepository extends CrudRepository<User, Integer>{
+@Repository
+public interface UsersRepository extends CrudRepository<User, Integer>{
 
-	public Optional<User> findUserByName(String name);
 }

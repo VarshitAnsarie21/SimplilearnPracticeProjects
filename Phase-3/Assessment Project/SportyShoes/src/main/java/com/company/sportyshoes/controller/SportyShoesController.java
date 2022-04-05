@@ -45,38 +45,6 @@ public class SportyShoesController {
 			return view;
 		}
 		
-//		@PostMapping("/adminLogin")
-//		public String getUser(Model model, @RequestParam("adminemail") String adminemail, @RequestParam("adminpassword") String adminpassword) {
-//			
-//			String view = null;
-//			
-//			if(adminemail == null || adminemail.isBlank() || adminemail.isEmpty() || adminemail == "" || adminpassword == null || adminpassword.isEmpty() || adminpassword.isBlank() || adminpassword == "") {
-//				
-//				view = "errorLogin";
-//				
-//			}else {
-//				
-//				Admin admin = new Admin();
-//				
-//				admin.setAdminemail(adminemail);
-//				admin.setAdminpassword(adminpassword);
-//				
-//			 	boolean isSuccess =  sportyShoesDAO.getAdmin(admin);
-//			 	
-//			 	if(isSuccess == true) {
-//		
-//			 		view = "adminDashboard";
-//			 		
-//			 	}else {
-//			 		
-//					view = "errorLogin";
-//				}
-//				
-//			}
-//			
-//			return view;
-//		}
-		
 		
 		@PostMapping("/changePassword")
 		public String adminCP(Model model, @RequestParam("adminpassword") String adminpassword) {

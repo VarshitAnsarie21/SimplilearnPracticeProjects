@@ -1,4 +1,4 @@
-package com.company.handlinguserauthentication.entity;
+package com.company.springsecurity.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
