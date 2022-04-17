@@ -6,7 +6,7 @@ import { SignupComponent } from './homepage/signup/signup.component';
 import { AboutUsComponent } from './homepage/about-us/about-us.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactusComponent } from './homepage/contactus/contactus/contactus.component';
-
+import { PorfolioPageComponent } from './porfolio-page/porfolio-page.component';
 
 const routes: Routes = [
 {path:'',
@@ -22,6 +22,12 @@ component:SignupComponent},
 
   path:'contactus',
   component:ContactusComponent
+
+},
+{
+
+  path:'myportfolio',
+  component:PorfolioPageComponent
 
 }];
 
